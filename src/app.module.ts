@@ -4,7 +4,9 @@ import { AppService } from './app.service.js';
 import { VoituresModule } from './spec/voitures/voitures.module.js';
 
 @Module({
-  imports: [VoituresModule],
+  imports: [VoituresModule,ConfigModule.forRoot({
+  isGlobal: true,
+}); 
   controllers: [AppController],
   providers: [AppService],
 })
